@@ -1,0 +1,16 @@
+﻿@using tHISiStHEsHOP.ViewModels
+@model CarsListViewModel
+@{
+    ViewData["Title"] = "ShowCars";
+}
+
+<h1>Tachki</h1>
+
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Car car in Model.GetAllCars)
+        {
+            @Html.Partial("AllCars", car)
+        }
+    }
+</div>
